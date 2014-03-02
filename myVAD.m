@@ -1,4 +1,11 @@
-Fs = 44100; %Sampling Frequency
+%EEA Hackathon, IIT Madras.
+%Team of Joseph Samuel, Green Rosh KS, Govind K and Vipin S.
+%Problem Statement 1
+
+%Based on the algorithm by Rabiner and Sambur(1975). 
+%More references in the README file.
+
+Fs = 44100; %Sampling Frequency which will be used throughout.
 
 disp('Recording starts(for 5s)')
 %Making the recorder object at 8 bits per sample and mono
