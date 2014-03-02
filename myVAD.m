@@ -1,6 +1,7 @@
 %EEA Hackathon, IIT Madras.
 %Team of Joseph Samuel, Green Rosh KS, Govind K and Vipin S.
 %Problem Statement 1
+%March 2, 2014
 
 %Based on the algorithm by Rabiner and Sambur(1975). 
 %More references in the README file.
@@ -174,6 +175,7 @@ trimmedX = x(x_start:x_finish); %Trim speech sample by start and finish
 subplot(2,1,1), plot(x)
 subplot(2,1,2), plot(trimmedX)
 a=length(x)-length(trimmedX);
-soundsc(trimmedX,Fs)
-voicelen=length(trimmedX)/Fs;
+soundsc(trimmedX,Fs) %Playing speech alone
+voicelen=length(trimmedX)/Fs; %Length of voice in seconds
+%Displaying the final output
 disp(sprintf('Speech is there for %f s',voicelen));
