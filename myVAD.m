@@ -1,13 +1,16 @@
 Fs = 44100; %Sampling Frequency
 
 disp('Recording starts(for 5s)')
-%Making the recorder object
+%Making the recorder object at 8 bits per sample and mono
 recc = audiorecorder(Fs,8,1);
+%Recording from mic
 recordblocking(recc,5);
 disp('End of Recording.')
 
+%Getting samples from the recorded audio
 x=getaudiodata(recc);
 
+%Processing starts now.
 Ini = 0.1; %Initial silence duration in seconds
 Ts = 0.01; %Frame width in seconds
 Tsh = 0.005; %Frame shift in seconds
